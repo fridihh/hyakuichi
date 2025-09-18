@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Old+Mincho&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    vertical-align: baseline;
+    font-size: 100%;
+    font: inherit;
+    line-height: 1.2;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+    content: ''; content: none;
+}
+table {
+    border-collapse: collapse; border-spacing: 0;
+}
+
+svg {
+    fill: black;
+    width: 3vw;
+    height: 3vh;
+}
+
+body {
+    background: linear-gradient(
+        to  right,
+        yellowgreen 0%,
+        yellowgreen 4%,
+        rgb(207, 207, 72) 4%,
+        rgb(207, 207, 72) 96%,
+        yellowgreen 96%,
+        yellowgreen 100%
+    );
+    display: grid;
+    grid-template-areas:
+    "header"
+    "main"
+    "footer";
+    width: min(100% -2rem, 92%);
+    margin-inline: auto;
+}
+
+header {
+    grid-area: header;
+    text-align: center;
+    height: auto;
+    margin-block: 2rem;
+    font-size: 3rem;
+    opacity: 1;
+    translate: 0;
+    transition:
+    opacity 1.5s ease,
+    translate 1.5s ease;
+    @starting-style {
+        opacity: 0;
+        translate: 0 1rem;
+    }
+}
+
+main {
+    grid-area: main;
+    place-items: center;
+    .k-con {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        gap: 1rem;
+        input {
+            border: 5px ridge black;
+            height: 6vh;
+            width: 25rem;
+            &:focus + label {
+                transform: translateY(-20px);
+            }
+        }
+        button {
+            background-color: #f5f5f5;
+            box-shadow: 0 5px 0 #cfcfcf,2px 2px 6px rgba(0,0,0,0.4);;
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+            padding-inline: .5rem;
+            place-items: center;
+            cursor: pointer;
+            height: 4.5vh;
+            margin-block: auto;
+            border-radius: 20px;
+            &:active {
+                box-shadow: none;
+            }
+        }
+    }
+
+    #results {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        gap: 1rem;
+        margin-block: 1rem;
+        place-items: center;
+    }
+
+    /* 札1枚のデザイン */
+    .card {
+        border: 10px solid yellowgreen;
+        background-color: white;
+        font-family: "Zen Old Mincho", serif;
+        width: auto;
+        height: 50vh;
+        display: grid;
+        place-items: center;
+        font-size: 1.5rem;
+        padding-block: 1rem;
+        writing-mode: vertical-rl;   /* 縦書き */
+        text-orientation: upright;   /* 文字直立 */
+        box-shadow: 2px 2px 6px rgba(0,0,0,0.2); /* 影をつけて札っぽく */
+        border-radius: 6px;
+    }
+}
+
+@keyframes tyty {
+                from {
+                    width: 0ch;
+                }
+            }
