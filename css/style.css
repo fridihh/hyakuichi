@@ -79,8 +79,8 @@ main {
             border: 5px ridge black;
             height: 6vh;
             width: 25rem;
-            &:focus + label {
-                transform: translateY(-20px);
+            &:focus {
+                outline: none;
             }
         }
         button {
@@ -125,9 +125,3 @@ main {
         border-radius: 6px;
     }
 }
-
-@keyframes tyty {
-                from {
-                    width: 0ch;
-                }
-            }
