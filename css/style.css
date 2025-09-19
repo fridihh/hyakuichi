@@ -104,7 +104,7 @@ main {
         display: grid;
         grid-template-columns: repeat(3, auto);
         gap: 1rem;
-        margin-block: 1rem;
+        margin-block: 2.5rem;
         place-items: center;
     }
 
