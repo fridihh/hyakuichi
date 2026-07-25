@@ -122,6 +122,6 @@ main {
         writing-mode: vertical-rl;   /* 縦書き */
         text-orientation: upright;   /* 文字直立 */
         box-shadow: 2px 2px 6px rgba(0,0,0,0.2); /* 影をつけて札っぽく */
-        border-radius: 6px;
+        /* border-radius: 6px; */
     }
 }
